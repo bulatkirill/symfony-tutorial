@@ -1,16 +1,18 @@
 {% extends 'layout.html.twig' %}
-<h1>List of printers</h1>
-<table>
-    <tr>
-        <td>Id</td>
-        <td>Name</td>
-        <td>Note</td>
-    </tr>
-    {% for printer in printers %}
+{% block content %}
+    <h1>List of printers</h1>
+    <table>
         <tr>
-            <td>{{ printer.id }}</td>
-            <td>{{ printer.name }}</td>
-            <td>{{ printer.note }}</td>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Note</td>
         </tr>
-    {% endfor %}
-</table>
+        {% for printer in printers %}
+            <tr>
+                <td>{{ printer.id }}</td>
+                <td>{{ printer.name }}</td>
+                <td>{{ printer.note }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
