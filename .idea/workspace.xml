@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a353e37-3689-43c8-9119-32f830e8e5ae" name="Default Changelist" comment="KBU: added a router and made some changes">
-      <change afterPath="$PROJECT_DIR$/src/Controller/PrinterController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Printer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/printers.html.twig" afterDir="false" />
+    <list default="true" id="3a353e37-3689-43c8-9119-32f830e8e5ae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/assets.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/prod/webpack_encore.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/test/webpack_encore.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/webpack_encore.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/error.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/printer/detail.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/LuckyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LuckyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/LuckyController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PrinterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PrinterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/lucky/number.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/printers.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/printer/index.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -143,6 +158,8 @@
       <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
       <path value="$PROJECT_DIR$/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -159,6 +176,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/test.php" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kbulat\Documents\php\tmp\my-project\templates\printer" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -198,7 +220,7 @@
       <workItem from="1556140402324" duration="1684000" />
       <workItem from="1556142102874" duration="557000" />
       <workItem from="1556142676664" duration="2587000" />
-      <workItem from="1574193299987" duration="1182000" />
+      <workItem from="1574193299987" duration="3913000" />
     </task>
     <task id="LOCAL-00001" summary="KBU: initial commit with first router">
       <created>1556143785934</created>
@@ -207,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556143785934</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="KBU: added a router and made some changes">
+      <created>1574194532688</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1574194532688</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,16 +257,5 @@
     <MESSAGE value="KBU: initial commit with first router" />
     <MESSAGE value="KBU: added a router and made some changes" />
     <option name="LAST_COMMIT_MESSAGE" value="KBU: added a router and made some changes" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/Controller/LuckyController.php</url>
-          <line>14</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

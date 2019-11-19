@@ -19,3 +19,12 @@
 
 # exclude all Ideas files from being commited
 .idea/
+
+# no need to add downloaded node_modules
+./node_modules
+###> symfony/webpack-encore-bundle ###
+/node_modules/
+/public/build/
+npm-debug.log
+yarn-error.log
+###< symfony/webpack-encore-bundle ###
