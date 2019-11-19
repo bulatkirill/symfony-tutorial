@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a353e37-3689-43c8-9119-32f830e8e5ae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/printer/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/printer/index.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -204,7 +204,7 @@
       <workItem from="1556142102874" duration="557000" />
       <workItem from="1556142676664" duration="2587000" />
       <workItem from="1574193299987" duration="6119000" />
-      <workItem from="1574199755567" duration="263000" />
+      <workItem from="1574199755567" duration="780000" />
     </task>
     <task id="LOCAL-00001" summary="KBU: initial commit with first router">
       <created>1556143785934</created>
@@ -227,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574197299225</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="KBU: fixed printers list error">
+      <created>1574200045481</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1574200045481</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,6 +257,7 @@
     <MESSAGE value="KBU: initial commit with first router" />
     <MESSAGE value="KBU: added a router and made some changes" />
     <MESSAGE value="KBU: added encore" />
-    <option name="LAST_COMMIT_MESSAGE" value="KBU: added encore" />
+    <MESSAGE value="KBU: fixed printers list error" />
+    <option name="LAST_COMMIT_MESSAGE" value="KBU: fixed printers list error" />
   </component>
 </project>
