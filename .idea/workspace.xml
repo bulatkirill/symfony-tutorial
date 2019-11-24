@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a353e37-3689-43c8-9119-32f830e8e5ae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-    </list>
+    <list default="true" id="3a353e37-3689-43c8-9119-32f830e8e5ae" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +148,9 @@
     <option name="height" value="980" />
   </component>
   <component name="ProjectId" id="1Tqgy0cTMcdq19XiuUyLBr1PLBs" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -209,7 +206,7 @@
       <workItem from="1574193299987" duration="7139000" />
       <workItem from="1574202485059" duration="1246000" />
       <workItem from="1574628512892" duration="79000" />
-      <workItem from="1574628614602" duration="473000" />
+      <workItem from="1574628614602" duration="799000" />
     </task>
     <task id="LOCAL-00001" summary="KBU: initial commit with first router">
       <created>1556143785934</created>
@@ -239,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574199459094</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="KBU: added Product entity with the help of make:entity">
+      <created>1574629325757</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1574629325757</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,10 +263,12 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="KBU: initial commit with first router" />
     <MESSAGE value="KBU: added a router and made some changes" />
     <MESSAGE value="KBU: added encore" />
     <MESSAGE value="KBU: added bootstrap 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="KBU: added bootstrap 4" />
+    <MESSAGE value="KBU: added Product entity with the help of make:entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="KBU: added Product entity with the help of make:entity" />
   </component>
 </project>
