@@ -3,103 +3,104 @@
 namespace App\Controller;
 
 use App\Entity\Product;
+use App\Form\ProductType;
+use App\Repository\ProductRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * @Route("/product")
+ */
 class ProductController extends AbstractController
 {
-
     /**
-     * @Route("/product/{id}", name="product_show")
-     * @param $id
+     * @Route("/", name="product_index", methods={"GET"})
+     * @param ProductRepository $productRepository
      * @return Response
      */
-    public function show($id)
+    public function index(ProductRepository $productRepository): Response
     {
-        $product = $this->getDoctrine()
-            ->getRepository(Product::class)
-            ->find($id);
-
-        if (!$product) {
-            throw $this->createNotFoundException(
-                'No product found for id ' . $id
-            );
-        }
-
-        return new Response('Check out this great product: ' . $product->getName());
-
-        // or render a template
-        // in the template, print things with {{ product.name }}
-        // return $this->render('product/show.html.twig', ['product' => $product]);
-    }
-
-    /**
-     * @Route("/product", name="create_product")
-     */
-    public function createProduct(): Response
-    {
-        // you can fetch the EntityManager via $this->getDoctrine()
-        // or you can add an argument to the action: createProduct(EntityManagerInterface $entityManager)
-        $entityManager = $this->getDoctrine()->getManager();
-
-        $product = new Product();
-        $product->setName('Keyboard');
-        $product->setPrice(1999);
-        $product->setDescription('Ergonomic and stylish!');
-
-        // tell Doctrine you want to (eventually) save the Product (no queries yet)
-        $entityManager->persist($product);
-
-        // actually executes the queries (i.e. the INSERT query)
-        $entityManager->flush();
-
-        return new Response('Saved new product with id ' . $product->getId());
-    }
-
-
-    /**
-     * @Route("/product/edit/{id}")
-     * @param $id
-     * @return RedirectResponse
-     */
-    public function update($id)
-    {
-        $entityManager = $this->getDoctrine()->getManager();
-        $product = $entityManager->getRepository(Product::class)->find($id);
-
-        if (!$product) {
-            throw $this->createNotFoundException(
-                'No product found for id ' . $id
-            );
-        }
-
-        $product->setName('New product name!');
-        $entityManager->flush();
-
-        return $this->redirectToRoute('product_show', [
-            'id' => $product->getId()
+        return $this->render('product/index.html.twig', [
+            'products' => $productRepository->findAll(),
         ]);
     }
 
     /**
-     * @Route("/product/{id}", methods={"DELETE"})
-     * @param $id
+     * @Route("/new", name="product_new", methods={"GET","POST"})
+     * @param Request $request
+     * @return Response
      */
-    public function delete($id)
+    public function new(Request $request): Response
     {
-        $product = $this->getDoctrine()
-            ->getRepository(Product::class)
-            ->find($id);
+        $product = new Product();
+        $form = $this->createForm(ProductType::class, $product);
+        $form->handleRequest($request);
 
-        if (!$product) {
-            throw $this->createNotFoundException(
-                'No product found for id ' . $id
-            );
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($product);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('product_index');
         }
-        $entityManager = $this->getDoctrine()->getManager();
-        $entityManager->remove($product);
-        $entityManager->flush();
+
+        return $this->render('product/new.html.twig', [
+            'product' => $product,
+            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/{id}", name="product_show", methods={"GET"})
+     * @param Product $product
+     * @return Response
+     */
+    public function show(Product $product): Response
+    {
+        return $this->render('product/show.html.twig', [
+            'product' => $product,
+        ]);
+    }
+
+    /**
+     * @Route("/{id}/edit", name="product_edit", methods={"GET","POST"})
+     * @param Request $request
+     * @param Product $product
+     * @return Response
+     */
+    public function edit(Request $request, Product $product): Response
+    {
+        $form = $this->createForm(ProductType::class, $product);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('product_index');
+        }
+
+        return $this->render('product/edit.html.twig', [
+            'product' => $product,
+            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/{id}", name="product_delete", methods={"DELETE"})
+     * @param Request $request
+     * @param Product $product
+     * @return Response
+     */
+    public function delete(Request $request, Product $product): Response
+    {
+        if ($this->isCsrfTokenValid('delete' . $product->getId(), $request->request->get('_token'))) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->remove($product);
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('product_index');
     }
 }

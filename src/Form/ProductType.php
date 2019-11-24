@@ -2,26 +2,27 @@
 
 namespace App\Form;
 
-use App\Entity\Person;
+use App\Entity\Product;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class PersonType extends AbstractType
+class ProductType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
             ->add('name')
-            ->add('surname')
-            ->add('profession')
+            ->add('description')
+            ->add('price')
+            ->add('note')
         ;
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => Person::class,
+            'data_class' => Product::class,
         ]);
     }
 }

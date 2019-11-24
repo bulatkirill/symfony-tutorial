@@ -2,18 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a353e37-3689-43c8-9119-32f830e8e5ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/PersonController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Person.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/PersonType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191124212127.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/PersonRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/person/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/person/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/person/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/person/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/person/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/person/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191124213343.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/product/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/product/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/product/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/product/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PersonController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PrinterController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Person.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Printer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/PersonType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ProductType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191124210348.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191124212127.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/PersonRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/person/_delete_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/person/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/person/edit.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/person/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/person/new.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/person/show.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/printer/detail.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/printer/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/index.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -219,7 +232,7 @@
       <workItem from="1574193299987" duration="7139000" />
       <workItem from="1574202485059" duration="1246000" />
       <workItem from="1574628512892" duration="79000" />
-      <workItem from="1574628614602" duration="2302000" />
+      <workItem from="1574628614602" duration="2749000" />
     </task>
     <task id="LOCAL-00001" summary="KBU: initial commit with first router">
       <created>1556143785934</created>
@@ -270,7 +283,21 @@
       <option name="project" value="LOCAL" />
       <updated>1574630281193</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="KBU: tested creation of Person entity and CRUD for Person">
+      <created>1574630945713</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1574630945713</updated>
+    </task>
+    <task id="LOCAL-00009" summary="KBU: tested creation of Person entity and CRUD for Person fix">
+      <created>1574630957279</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1574630957279</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,6 +325,8 @@
     <MESSAGE value="KBU: added Product entity with the help of make:entity" />
     <MESSAGE value="KBU: made a migration for Product table" />
     <MESSAGE value="KBU: created a Product controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="KBU: created a Product controller" />
+    <MESSAGE value="KBU: tested creation of Person entity and CRUD for Person" />
+    <MESSAGE value="KBU: tested creation of Person entity and CRUD for Person fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="KBU: tested creation of Person entity and CRUD for Person fix" />
   </component>
 </project>
